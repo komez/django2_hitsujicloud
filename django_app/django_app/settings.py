@@ -31,15 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'games',
     'users.apps.UsersConfig',
 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'django.contrib.sites',
-    #django-allauthで使用する基本ライブラリの追加
+    'django.contrib.sites', #django-allauthで使用する基本ライブラリの追加
+
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth', #Djangoモデルごとに、追加、変更、削除、表示の4つのデフォルトのアクセス許可が作成されます
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -88,7 +89,7 @@ AUTH_USER_MODEL = 'users.User'
 
 #以下、django-allauthの各種設定
 SITE_ID = 1
-LOGIN_REDIRECT_URL = 'todo:index' # ログイン後遷移する画面を指定
+LOGIN_REDIRECT_URL = '/games/' # ログイン後遷移する画面を指定
 ACCOUNT_LOGOUT_REDIRECT_URL = 'users:logout' # ログアウト後遷移する画面の指定
 ACCOUNT_AUTHENTICATION_METHOD = 'email' # 認証方法をメールアドレスにする
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None # Userモデルにusernameは無い

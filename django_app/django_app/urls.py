@@ -18,6 +18,8 @@ from django.urls import include, path
 from django.conf import settings
 
 urlpatterns = [
-    path('accounts/', include('allauth.urls')),
+    path('accounts/', include('allauth.urls')), #追加
+    path('users/', include('users.urls')),
+    path('games/', include('games.urls')),
     path('admin/', admin.site.urls),
 ]
