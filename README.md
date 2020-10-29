@@ -1,1 +1,1 @@
-# django2_hitsujicloud
+# django2_hitsujicloudのさいとを参照した
