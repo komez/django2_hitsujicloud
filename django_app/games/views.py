@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import user_logged_out
 # Create your views here.
 @login_required(login_url = '/accounts/login/')
 def index(request):
@@ -17,3 +18,6 @@ def index(request):
     }
 
     return render(request, 'games/index.html', params)
+
+def logout_view(request):
+    user_logged_out(request)

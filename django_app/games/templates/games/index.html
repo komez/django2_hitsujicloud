@@ -9,6 +9,13 @@
 </head>
 <body>
     {% csrf_token %}
-    <p>Hello, world!!</p>
+    {% if user.id  %}
+    <p>ログインしました．</p>
+    <p>こんにちは，{{ user.username }}さん</p>
+    <a href="{% url 'games:logout' %}">ログアウトする</a>
+    {% else %}
+    <a href="{% url 'games:login' %}">ログイン</a>
+    <a href="{% url 'games:create_account' %}">アカウント作成</a>
+    {% endif %}
 </body>
 </html>
