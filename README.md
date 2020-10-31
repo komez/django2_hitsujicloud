@@ -1,4 +1,4 @@
-#djangoサービスの雛形
+# djangoサービスの雛形
 会員登録機能がカスタマイズされたアプリ
 
 django2_hitsujicloudのサイトを参照
