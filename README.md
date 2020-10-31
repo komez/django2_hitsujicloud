@@ -1,1 +1,4 @@
-# django2_hitsujicloudのさいとを参照した
+#djangoサービスの雛形
+会員登録機能がカスタマイズされたアプリ
+
+django2_hitsujicloudのサイトを参照
